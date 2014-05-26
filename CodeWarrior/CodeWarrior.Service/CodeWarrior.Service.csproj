@@ -173,6 +173,7 @@
     <Compile Include="Areas\HelpPage\SampleGeneration\TextSample.cs" />
     <Compile Include="Areas\HelpPage\XmlDocumentationProvider.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\QuestionsController.cs" />
     <Compile Include="Controllers\ValuesController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -299,6 +300,20 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CodeWarrior.Business.Model\CodeWarrior.Business.Model.csproj">
+      <Project>{3f8e8693-0867-403d-ac70-91b6befb89da}</Project>
+      <Name>CodeWarrior.Business.Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CodeWarrior.Data.Core\CodeWarrior.Data.Core.csproj">
+      <Project>{27f6f5ff-6e02-4caa-9054-71048be5052b}</Project>
+      <Name>CodeWarrior.Data.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CodeWarrior.Data.MongoDB\CodeWarrior.Data.MongoDB.csproj">
+      <Project>{38c0763e-3c31-433c-8170-daee098abb11}</Project>
+      <Name>CodeWarrior.Data.MongoDB</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

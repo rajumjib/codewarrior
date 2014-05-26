@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MongoDB.Bson.Serialization.Attributes;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,13 +7,13 @@ using System.Threading.Tasks;
 
 namespace CodeWarrior.Business.Model
 {
+
     public partial class Answer
     {
-        public virtual int Id
-        {
-            get;
-            set;
-        }
+        public virtual int Id { get; set; }
+
+        [BsonId]
+        public virtual string _Id { get; set; }
 
         public virtual int QuestionId
         {
@@ -31,29 +32,13 @@ namespace CodeWarrior.Business.Model
         }
         private int _questionId;
 
-        public virtual string AnswerText
-        {
-            get;
-            set;
-        }
+        public virtual string AnswerText { get; set; }
 
-        public virtual int Votes
-        {
-            get;
-            set;
-        }
+        public virtual int Votes { get; set; }
 
-        public virtual System.DateTime DateCreated
-        {
-            get;
-            set;
-        }
+        public virtual System.DateTime DateCreated { get; set; }
 
-        public virtual Question Question
-        {
-            get;
-            set;
-        }
+        public virtual Question Question { get; set; }
 
         public virtual ICollection<Comment> Comments
         {

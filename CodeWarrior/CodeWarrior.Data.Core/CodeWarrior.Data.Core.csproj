@@ -45,15 +45,20 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
+    <Compile Include="Interfaces\IQuestionRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="CodeWarrior.pfx" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Interfaces\" />
     <Folder Include="Parameters\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CodeWarrior.Business.Model\CodeWarrior.Business.Model.csproj">
+      <Project>{3f8e8693-0867-403d-ac70-91b6befb89da}</Project>
+      <Name>CodeWarrior.Business.Model</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -59,10 +59,14 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
-    <Compile Include="ContactRepositoryTest.cs" />
+    <Compile Include="QuestionRepositoryTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\CodeWarrior.Business.Model\CodeWarrior.Business.Model.csproj">
+      <Project>{3f8e8693-0867-403d-ac70-91b6befb89da}</Project>
+      <Name>CodeWarrior.Business.Model</Name>
+    </ProjectReference>
     <ProjectReference Include="..\CodeWarrior.Data.Core\CodeWarrior.Data.Core.csproj">
       <Project>{27f6f5ff-6e02-4caa-9054-71048be5052b}</Project>
       <Name>CodeWarrior.Data.Core</Name>

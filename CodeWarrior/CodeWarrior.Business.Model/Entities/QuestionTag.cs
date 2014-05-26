@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MongoDB.Bson.Serialization.Attributes;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,11 +9,10 @@ namespace CodeWarrior.Business.Model
 {
     public partial class QuestionTag
     {
-        public virtual int Id
-        {
-            get;
-            set;
-        }
+        public virtual int Id { get; set; }
+
+        [BsonId]
+        public virtual string _Id { get; set; }
 
         public virtual int TagId
         {
@@ -48,16 +48,8 @@ namespace CodeWarrior.Business.Model
         }
         private int _questionId;
 
-        public virtual Question Question
-        {
-            get;
-            set;
-        }
+        public virtual Question Question { get; set; }
 
-        public virtual Tag Tag
-        {
-            get;
-            set;
-        }
+        public virtual Tag Tag { get; set; }
     }
 }
