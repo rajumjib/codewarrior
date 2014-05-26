@@ -59,6 +59,10 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
+    <Compile Include="TagRepositoryTest.cs" />
+    <Compile Include="QuestionTagRepositoryTest.cs" />
+    <Compile Include="CommentRepositoryTest.cs" />
+    <Compile Include="AnswerRepositoryTest.cs" />
     <Compile Include="QuestionRepositoryTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
